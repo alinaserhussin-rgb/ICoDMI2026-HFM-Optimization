@@ -1,6 +1,6 @@
 """Summarize archived ICoDMI 2026 supplementary experiment CSV files.
 This script analyzes stored outputs; it does NOT regenerate optimizer runs.
-Run from the folder containing the data/ directory.
+Run from the repository root; CSV files may reside in the root or in data/.
 """
 import csv
 import math
@@ -8,10 +8,14 @@ import statistics
 from collections import defaultdict
 from pathlib import Path
 
-DATA = Path(__file__).resolve().parent / 'data'
+ROOT = Path(__file__).resolve().parent
 
 def load(name):
-    with (DATA / name).open(newline='', encoding='utf-8') as f:
+    candidates = (ROOT / name, ROOT / 'data' / name)
+    path = next((p for p in candidates if p.is_file()), None)
+    if path is None:
+        raise FileNotFoundError(f"Cannot find {name} in repository root or data/")
+    with path.open(newline='', encoding='utf-8') as f:
         return list(csv.DictReader(f))
 
 def summary(rows, group_cols, value_col):
