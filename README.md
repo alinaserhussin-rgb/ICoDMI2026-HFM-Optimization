@@ -32,7 +32,7 @@ The script performs 30 paired runs per benchmark with fixed random seeds, report
 
 ## Reproducibility note
 
-The main script reproduces the baseline benchmark experiments. Additional experiments reported in the revised manuscript, including higher-dimensional and noise tests, require their corresponding scripts and data to be made available separately.
+The main script reproduces the baseline benchmark experiments. Supplementary CSV datasets (high-dimensional, noise, sensitivity, and matched-call tests) are included in this repository. Run `python analyze_additional_experiments.py` to summarize the archived results. The original scripts that generated these supplementary CSVs are **not included**, so the supplementary tests cannot yet be regenerated end-to-end from this repository. See `ADDITIONAL_EXPERIMENTS_README.md` for details. `optimization_full_code.py` is an older historically labeled version; use `optimization_full_code_HFM.py` for the revised paper.
 
 ## Authors
 
