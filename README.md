@@ -4,9 +4,9 @@ Companion code and experiment data for **“Comparative Analysis of Gradient-Bas
 
 ## Complete reproducibility package
 
-**[Download the complete code, experiment logs, and figures (ZIP)](./HFM-benchmark_code%20%281%29.zip)**
+**[Download the complete code, experiment logs, and figures (ZIP)](./HFM-benchmark_code.zip)**
 
-This is the **canonical package for the revised paper**. It contains the reference optimizers, experiment-generation scripts, numerical analysis, archived CSV results, and the plots used in the manuscript. The older `optimization_full_code.py` and `optimization_full_code_HFM.py` at the repository root are earlier standalone benchmark scripts; **use the ZIP package for the revised manuscript's full experiments**.
+This is the **canonical package for the revised paper**. It contains the reference optimizers, experiment-generation scripts, numerical analysis, archived CSV results, and the plots used in the manuscript. Older standalone scripts are preserved in [`archive/legacy`](./archive/legacy/). Earlier supplementary CSVs and their analyzer are preserved separately in [`archive/supplementary`](./archive/supplementary/). **Use the main ZIP package for the revised manuscript's experiments.**
 
 ## Package contents
 
@@ -54,3 +54,11 @@ The bounded-step result in the manuscript **is not a general convergence guarant
 ## Contact
 
 Ali Nasser Al-Moussawi and Audie Sabrie Abd Al-Razzak
+
+## Repository layout
+
+- [`HFM-benchmark_code.zip`](./HFM-benchmark_code.zip): definitive, downloadable revised-paper code, results and figures.
+- [`archive/legacy/`](./archive/legacy/): earlier benchmark implementations and their old instructions (not the canonical code).
+- [`archive/supplementary/`](./archive/supplementary/): historical additional CSV analyses supplied for transparency (not the canonical results).
+
+The archived materials are retained for provenance and should not be mixed with the results in the main ZIP.
